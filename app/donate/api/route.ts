@@ -1,10 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import { redirect } from "next/dist/server/api-utils";
 import Stripe from 'stripe'
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: Request, res: Response) {
 
   try {
     const params: Stripe.Checkout.SessionCreateParams = {
@@ -31,7 +30,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request, res: Response) {
 
   try {
     const params: Stripe.Checkout.SessionCreateParams = {
