@@ -51,7 +51,7 @@ export default function ContactForm() {
         })
        }}> 
       {(props) => (
-      <Form data-testid="contact-form" className=" flex flex-col w-4/5 lg:w-1/2 ">
+      <Form data-testid="contact-form" className=" flex flex-col md:w-4/5 lg:w-1/2 ">
 
           <div className="flex flex-col m-2 ">
           <label htmlFor='name-input' className="form-label ">Name</label>

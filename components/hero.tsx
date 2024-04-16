@@ -16,8 +16,8 @@ export default function Hero(props: HeroProps) {
     <div>
       
     <div data-testid="hero-section" className="bg-black text-white pt-12 text-lg pb-8 px-4 flex flex-col items-center justify-between h-screen fixed w-screen  z-0">
-      <div className="text-center flex flex-col items-center mt-24 self-center lg:w-1/2">
-         <h1 className="font-display text-7xl my-2 md:mt-12 text-yellow-600">The Big Firkin Band</h1>
+      <div className="text-center flex flex-col items-center mt-16 md:mt-24 self-center lg:w-1/2">
+         <h1 className="font-display text-5xl md:text-7xl my-2 md:mt-12 text-yellow-500">The Big Firkin Band</h1>
        {/* <div className=" rounded overflow-hidden my-2">
         <Image data-testid={"band-img"} src={bandHero} alt="Front on short of the band performing outside" title="The Big Firkin Band" className="self-center" width={500}/>
       </div> */}
@@ -29,7 +29,7 @@ export default function Hero(props: HeroProps) {
           <EventTile event={nextGig} />
         </div>} */}
         {nextGig !== undefined && 
-        <div className="self-end font-title md:text-2xl">
+        <div className="self-start font-title md:text-2xl mb-12">
           <h3 className="">Next gig:</h3>
           <p className=" md:text-3xl text-2xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">

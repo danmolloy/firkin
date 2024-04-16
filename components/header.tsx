@@ -81,8 +81,8 @@ export default function Header() {
   }, [scrollPosition]); */
 
   return (
-    <div data-testid="header-section" className={`${/* scrollPosition > 600 */ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"} transition-colors duration-100 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
-       <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display `}>The Big Firkin Band</button>
+    <div data-testid="header-section" className={`${/* scrollPosition > 600 */ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"} transition-colors duration-300 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
+       <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
       <DonateButton />
     </div>
   )
