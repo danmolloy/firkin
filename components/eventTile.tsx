@@ -10,10 +10,11 @@ export default function EventTile(props: EventTileProps) {
   return (
     <div data-testid={`${event.id}-tile`} className="border-b-[1.5px] p-1 my-1 font-text">
       <div>
-        <p className=" text-2xl" data-testid="start-time">{DateTime.fromJSDate(new Date(event.start.dateTime)).toFormat("dd LLL yyyy")}</p>
+        <p className=" text-lg" data-testid="start-time">{DateTime.fromJSDate(new Date(event.start.dateTime)).toFormat("dd LLL yyyy")}</p>
         <p data-testid="date">{DateTime.fromJSDate(new Date(event.start.dateTime)).toFormat("hh:mm a")}</p>
       </div>
-      <p data-testid="location">@ {event.location}</p>
-    </div>
+        <p data-testid="location">@ <a target="_blank" className="text-blue-600 hover:underline" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}>{event.location}</a>
+        </p>  
+      </div>
   )
 }
