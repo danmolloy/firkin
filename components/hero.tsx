@@ -29,7 +29,7 @@ export default function Hero(props: HeroProps) {
           <EventTile event={nextGig} />
         </div>} */}
         {nextGig !== undefined && 
-        <div className="self-start font-title md:text-2xl mb-12">
+        <div className="self-start font-title md:text-2xl mb-16">
           <h3 className="">Next gig:</h3>
           <p className=" md:text-3xl text-2xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">
