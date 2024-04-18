@@ -61,31 +61,23 @@ export default function Header() {
     };
   }, []);
 
-  /* useEffect(() => {
-    function handleScroll() {
-      const currentPosition = window.scrollY;
-      if (currentPosition > scrollPosition + 100) {
-        setScrollPosition(currentPosition);
-        setShowHeader(false)
-      } else if (currentPosition < scrollPosition - 5) {
-        setScrollPosition(currentPosition);
-        setShowHeader(true)
-      }
-    }
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollPosition]); */
 
   return (
 
-    <div data-testid="header-section" className={`${/* scrollPosition > 600 */ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"} transition-colors duration-300 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
-       <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
+    <div data-testid="header-section" className={` transition-colors duration-300 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4  mix-blend-difference text-white z-20`}>
+       <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={` font-display  `}>The Big Firkin Band</button>
 
       <DonateButton />
     </div>
   )
 }
+
+/* 
+<div data-testid="header-section" className={`${ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"} transition-colors duration-300 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
+<button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
+
+<DonateButton />
+</div>
+
+*/
