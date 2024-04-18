@@ -21,7 +21,7 @@ const stripePromise =
   
     return (
       <form action="/donate/api" method="POST">
-          <button className='hover:text-yellow-400 px-2 m-1 py-1 rounded font-title font-bold' type="submit" role="link">
+          <button className='hover:text-yellow-400 rounded font-title font-bold' type="submit" role="link">
             Donate
           </button>
       </form>

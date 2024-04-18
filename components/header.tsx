@@ -65,11 +65,11 @@ export default function Header() {
 
   return (
 
-    <div data-testid="header-section" className={` transition-colors duration-300 fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 mix-blend-difference text-white z-20`}>
-       <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={` font-display  `}>The Big Firkin Band</button>
+    <div data-testid="header-section" className={`${ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"}  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
+<button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
 
-      <DonateButton />
-    </div>
+<DonateButton />
+</div>
   )
 }
 
