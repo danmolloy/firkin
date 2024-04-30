@@ -20,9 +20,12 @@ export default function Musicians() {
         <Image data-testid={"band-img"} src={bandDetail} width={500} alt="Placeholder for band photo" title="Band photo placeholder" className="self-center"/>
       </div>
       <div data-testid="band-leader" className="py-4 flex flex-col">
-        <h3 className="text-xl pb-1 font-text">Eoghan Kelly</h3>
+        <h3 className="text-xl pb-1 font-text">Bandleader</h3>
         <p className="pb-4 text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Eoghan Kelly is a Trombone player originally from Cork City and now based in Catford. Along with directing The Big Firkin Band he plays with a number of other Big Bands in London and freelances with  bands, orchestras and ensembles all over Britain and Ireland. He frequently performs in West End shows and London Jazz venues. He has recorded and performed with many Jazz, Classical and Rock artists including Georgie Fame, the National Symphony Orchestra and Sinead O Conner. Touring credits include Liam Gallagher, Blur and Florence And The Machine.         
+        </p>
+        <p className="text-lg">
+        Eoghan also has a busy teaching schedule working with Lewisham Music, providing music lessons to young musicians of all abilities throughout the Borough of Lewisham.
         </p>
         <div className="rounded overflow-hidden self-center">
           <Image data-testid={"band-leader-img"} src={eoghanKelly} width={250}  alt="Placeholder for a band leader photo" title="Band leader photo placeholder" className="self-center"/>

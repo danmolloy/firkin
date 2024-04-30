@@ -10,7 +10,7 @@ export default function Calendar(props: CalendarProps) {
 
   return (
     <div data-testid="calendar-section" className="px-8 py-12 flex flex-col bg-white">
-      <h2 className="text-2xl font-title pb-4">Calendar</h2>
+      <h2 className="text-2xl font-text pb-4">Calendar</h2>
       <div>
         {events.length === 0 
         ? <p>No upcoming gigs</p>

@@ -5,6 +5,7 @@ import bandHero from '../public/bandHero.jpg'
 import { DateTime } from "luxon";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 export type HeroProps = {
   nextGig: Event
@@ -20,8 +21,9 @@ export default function Hero(props: HeroProps) {
       <div className="text-center flex flex-col items-center mt-16 md:mt-24 self-center lg:w-1/2">
          <h1 className="font-display text-6xl md:text-7xl my-2 md:mt-12 text-yellow-500">The Big Firkin Band</h1>
          <div className="p-4">
-         <p className="text-xl font-text">17-piece jazz big band sensation!</p>
-         <p className="text-xl font-text">Live at the Fox & Firkin on the second Sunday of the month 3:30pm-6pm!</p>
+         <p className="text-xl font-text border-b pb-4 text-gray-300">17-piece jazz big band sensation</p>
+
+         <p className="text-xl font-text pt-2 text-yellow-400">Live at the Fox & Firkin on the second Sunday of the month 3:30pm-6pm!</p>
          </div>
 
        {/* <div className=" rounded overflow-hidden my-2">
@@ -44,11 +46,11 @@ export default function Hero(props: HeroProps) {
           <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("hh:mm a")} @ {nextGig.location.split(",")[0]}</p>
             </div>
           </div>}
-          <div className="flex flex-row mt-1">
-          <button /* href="https://www.instagram.com/thebigfirkinband/" target="_blank" */ title="Firkin Band Instagram" className=" text-2xl flex flex-row items-center">
+          <div className="flex flex-row mb-2 mt-4">
+          <Link href="https://www.instagram.com/thebigfirkinband/" target="_blank"  title="Firkin Band Instagram" className="text-gray-400 hover:text-yellow-500 flex flex-row items-center ">
         <FaInstagram />
-        <p className="text-sm ml-2">Follow us</p>
-      </button>
+        <p className="text-sm mx-2">Follow us</p>
+      </Link>
 
           </div>
         </div>
