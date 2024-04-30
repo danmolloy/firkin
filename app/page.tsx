@@ -41,7 +41,7 @@ export default async function Home() {
   //const [showHeader, setShowHeader] = useState<boolean>(true)
   //const [showMenu, setShowMenu] = useState<boolean>(false)
   const data = await getData()
-  const calendar = data.items.filter((i: Event) => DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
+  const calendar = data.items.sort((a:any, b:any) => DateTime.fromJSDate(new Date(a.start.dateTime)) - DateTime.fromJSDate(new Date(b.start.dateTime))).filter((i: Event) => DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
 
   return (
     <main className="flex flex-col text-black bg-slate-50 " data-testid="main-page">

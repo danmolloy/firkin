@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Irish_Grover, Inconsolata, Nunito, Kanit, Hammersmith_One, Special_Elite, Abril_Fatface, Notable, Medula_One, Roboto, Roboto_Mono } from "next/font/google";
+import { Inter, Irish_Grover, Inconsolata, Nunito, Kanit, Hammersmith_One, Special_Elite, Abril_Fatface, Notable, Medula_One, Roboto, Roboto_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -9,7 +9,7 @@ const irishGrover = Irish_Grover({ weight: "400", subsets: ["latin"], variable: 
 const abrilFatface = Abril_Fatface({ weight: "400", subsets: ["latin"], variable: '--font-abril-fatface' })
 const notable = Notable({weight: "400", subsets: ["latin"], variable: '--font-notable' })
 const specialElite = Special_Elite({weight: "400", subsets: ["latin"], variable: '--font-special-elite' })
-const robotoMono = Roboto_Mono({weight: "400", subsets: ["latin"], variable: '--font-roboto-mono' })
+const robotoMono = Montserrat({weight: "400", subsets: ["latin"], variable: '--font-roboto-mono' })
 
 export const metadata: Metadata = {
   title: "The Big Firkin Band",

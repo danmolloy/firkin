@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { IoMdMenu } from "react-icons/io";
 import DonateButton from "./donateButton";
+import { FaInstagram } from "react-icons/fa";
 
 
 export const menuItems: {title: string}[] = [
