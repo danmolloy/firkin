@@ -32,7 +32,7 @@ export default function Hero(props: HeroProps) {
           <h3 className="">Next gig:</h3>
           <p className=" md:text-3xl text-xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">
-          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("hh:mm a")} @ {nextGig.location.split(",")[0]}</p>
+          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("hh:mm a")} @ {nextGig.location.split(",")[0]}</p>
             </div>
           </Link>}
           <div className="flex flex-row mb-2 mt-2 md:mt-4">
