@@ -30,7 +30,7 @@ export default function Hero(props: HeroProps) {
         {nextGig !== undefined && 
           <Link href={'/#calendar'} className="hover:cursor-pointer hover:text-gray-200">
           <h3 className="">Next gig:</h3>
-          <p className=" md:text-3xl text-xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("dd LLL yyyy")}</p>
+          <p className=" md:text-3xl text-xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">
           <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).toFormat("hh:mm a")} @ {nextGig.location.split(",")[0]}</p>
             </div>

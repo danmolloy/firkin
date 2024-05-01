@@ -15,10 +15,10 @@ export default function ContactForm() {
   const sendingMsg = (<div><h2 className="text-2xl">Message sending...</h2></div>)
 
   return (
-      <div id="dark-section" className='px-8 py-6 flex flex-col bg-black text-white'>
+      <div id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-black text-white'>
               <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
-                <p>For info on upcoming gigs and events.</p>
+                <p className='text-gray-300'>Get info on upcoming gigs and events.</p>
 {/*                 <p>Follow on instagram</p>
  */}              </div>
 
