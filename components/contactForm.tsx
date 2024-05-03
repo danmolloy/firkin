@@ -2,7 +2,6 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import axios from "axios";
 
 export default function ContactForm() {
@@ -40,10 +39,10 @@ export default function ContactForm() {
         //.required('message required')
     })}
     onSubmit={async (values, actions ) => {
-      //setSendStatus("sending")
+      setSendStatus("sending")
       await new Promise(resolve => setTimeout(resolve, 1000))
       axios.post("/api", values)
-      .then((res) => {
+      .then(async (res) => {
         console.log('Response received')
         if (res.status === 200) {
           setSendStatus("success")
@@ -102,7 +101,7 @@ export default function ContactForm() {
           </ErrorMessage>
           </div>
           </div>
-        <button id="submit-button" type='submit' className="hover:bg-gray-900 border shadow-sm border-yellow-500 text-yellow-500 m-2 p-1 w-24 rounded self-end">Submit</button>
+        <button disabled={props.isSubmitting || sendStatus === "sending"} id="submit-button" type='submit' className="disabled:opacity-30 hover:bg-gray-900 border shadow-sm border-yellow-500 text-yellow-500 m-2 p-1 w-24 rounded self-end">Submit</button>
         <div>
         {sendStatus === "sending" 
         ? sendingMsg

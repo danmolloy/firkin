@@ -24,7 +24,7 @@ export async function POST(request: Request) {
   const mailData = {
     from: FROM_EMAIL,
     to: TO_EMAIL,
-    subject: `Portfolio Message from ${req.name}`,
+    subject: `Firkin Band Message from ${req.name}`,
     text: `${req.message} | Sent from ${req.email}`,
     html: `<div>${req.message}</div><p>Sent from: ${req.email}</p>`
   }
