@@ -7,7 +7,7 @@ export type CalendarProps = {
 
 export default function Calendar(props: CalendarProps) {
   const { events } = props;
-
+/*  */
   return (
     <div id="calendar" data-testid="calendar-section" className="px-8 py-14 flex flex-col bg-white">
       <h2 className="text-2xl font-text pb-4">Calendar</h2>
