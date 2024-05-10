@@ -22,4 +22,8 @@ describe("<About />", () => {
     const bandPhoto = screen.getByAltText("Placeholder for band photo")
     expect(bandPhoto).toBeInTheDocument()
   })
+  it("matches snapshot", () => {
+    const aboutSection = screen.getByTestId("about-section")
+    expect(aboutSection).toMatchSnapshot()
+  })
 })

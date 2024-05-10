@@ -22,12 +22,9 @@ describe("<EventTile />", () => {
   beforeEach(() => {
     render(<EventTile {...mockProps} />)
   })
-  it("event-summary is in the document", () => {
-    const eventSummary = screen.getByText(mockProps.event.summary)
-    expect(eventSummary).toBeInTheDocument()
-  })
+
   it("formatted start time is in the document", () => {
-    const formattedTime = DateTime.fromJSDate(new Date(mockProps.event.start.dateTime)).toFormat("hh:mma")
+    const formattedTime = DateTime.fromJSDate(new Date(mockProps.event.start.dateTime)).toFormat("hh:mm a")
     const startTime = screen.getByText(formattedTime)
     expect(startTime).toBeInTheDocument()
   })

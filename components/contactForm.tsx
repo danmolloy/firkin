@@ -14,7 +14,7 @@ export default function ContactForm() {
   const sendingMsg = (<div><h2 className="text-2xl">Message sending...</h2></div>)
 
   return (
-      <div id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-black text-white'>
+      <div data-testid="contact-form" id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-black text-white'>
               <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
                 <p className='text-gray-300'>Get info on upcoming gigs and events.</p>
@@ -54,7 +54,7 @@ export default function ContactForm() {
         })
        }}> 
       {(props) => (
-      <Form data-testid="contact-form" className=" flex flex-col md:w-4/5 lg:w-1/2 ">
+      <Form  className=" flex flex-col md:w-4/5 lg:w-1/2 ">
 
           <div className="flex flex-col m-2 ">
           <label htmlFor='name-input' className="form-label ">Name</label>
@@ -83,7 +83,7 @@ export default function ContactForm() {
           </div>
           </div>
           <div className="flex flex-col m-2 mb-0">
-          <label htmlFor='msg-text' className="form-label ">Message <span className='text-sm text-gray-500'>Optional</span></label>
+          <label htmlFor='msg-text' className="form-label ">Message <span className='text-sm text-gray-400'>Optional</span></label>
           <Field 
           multiline="6"
           maxLength="500"

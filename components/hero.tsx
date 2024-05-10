@@ -28,15 +28,15 @@ export default function Hero(props: HeroProps) {
 
         <div className="self-start  md:text-2xl mb-20 px-2 pt-1 md:pt-2 font-text">
         {nextGig !== undefined && 
-          <Link href={'/#calendar'} className="hover:cursor-pointer hover:text-gray-200">
-          <h3 className="">Next gig:</h3>
+          <Link data-testid="next-gig" href={'/#calendar'} className="hover:cursor-pointer hover:text-gray-200">
+          <h2 className="">Next gig:</h2>
           <p className=" md:text-3xl text-xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">
-          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("hh:mm a")} @ {nextGig.location.split(",")[0]}</p>
+          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("h:mm a")} @ {nextGig.location.split(",")[0]}</p>
             </div>
           </Link>}
           <div className="flex flex-row mb-2 mt-2 md:mt-4">
-          <Link href="https://www.instagram.com/thebigfirkinband/" target="_blank"  title="Firkin Band Instagram" className="text-gray-400 hover:text-yellow-500 flex flex-row items-center ">
+          <Link data-testid="insta-link" href="https://www.instagram.com/thebigfirkinband/" target="_blank"  title="Firkin Band Instagram" className="text-gray-400 hover:text-yellow-500 flex flex-row items-center ">
         <FaInstagram />
         <p className="text-sm mx-2">Follow us</p>
       </Link>

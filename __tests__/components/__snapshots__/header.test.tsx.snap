@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> matches snapshot 1`] = `
+<div
+  class="text-black  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20"
+  data-testid="header-section"
+>
+  <button
+    class="text-black font-display"
+  >
+    The Big Firkin Band
+  </button>
+  <form
+    action="/donate/api"
+    data-testid="donate-btn"
+    method="POST"
+  >
+    <button
+      class="hover:text-yellow-400 rounded font-bold text-lg font-text"
+      role="link"
+      type="submit"
+    >
+      Donate
+    </button>
+  </form>
+</div>
+`;

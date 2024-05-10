@@ -25,11 +25,11 @@ describe("<Musicians />", () => {
     expect(bandLeader.textContent).toMatch("Eoghan Kelly")
   })
   it("band leader photo is in the document", () => {
-    const leaderPhoto = screen.getByAltText("Placeholder for a band leader photo")
+    const leaderPhoto = screen.getByAltText("Band leader Eoghan Kelly playing his trombone")
     expect(leaderPhoto).toBeInTheDocument()
   })
   it("band photo is in the document", () => {
-    const bandPhoto = screen.getByAltText("Placeholder for a band photo")
+    const bandPhoto = screen.getByAltText("The band performing live at the Fox & Firkin")
     expect(bandPhoto).toBeInTheDocument()
   })
 })

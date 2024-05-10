@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About /> matches snapshot 1`] = `
+<div
+  class="p-8 lg:px-16 flex flex-col py-12 bg-white"
+  data-testid="about-section"
+>
+  <h2
+    class="text-2xl "
+  >
+    About
+  </h2>
+  <div
+    class="py-4 font-text text-lg"
+    data-testid="about-blurb"
+  >
+    <p
+      class=""
+    >
+      The Big Firkin Band is a collective of world class jazz musicians, based in Lewisham and South East London, who come together once a month to perform classic Big Band music made famous by the great bands of Duke Ellington, Count Basie, Buddy Rich, Thad Jones, Stan Kenton and Woody Herman.
+    </p>
+    <p
+      class="mt-2"
+    >
+      Expect to hear the greatest tunes from the golden age of jazz and swing performed by the best musicians in London, all in a relaxed and comfortable fashion at The Fox & Firkin on a Sunday afternoon.
+    </p>
+  </div>
+  <div
+    class="rounded overflow-hidden self-center"
+  >
+    <img
+      alt="Placeholder for band photo"
+      class="self-center"
+      data-nimg="1"
+      data-testid="band-img"
+      decoding="async"
+      height="500"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
+      srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
+      style="color: transparent;"
+      title="Band photo placeholder"
+      width="500"
+    />
+  </div>
+</div>
+`;

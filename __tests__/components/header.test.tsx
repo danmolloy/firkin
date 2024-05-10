@@ -1,4 +1,4 @@
-import Header, { HeaderProps, menuItems } from "@/components/header"
+import Header, {  menuItems } from "@/components/header"
 import { act, fireEvent, render, screen } from "@testing-library/react"
 import { Link, animateScroll } from "react-scroll";
 import "@testing-library/jest-dom"
@@ -10,14 +10,18 @@ jest.mock("react-scroll", () => ({
   Link: (props: any) => <div></div>
 }))
 
-const mockProps: HeaderProps = {
-  setShowMenu: jest.fn(),
-  setShowHeader: jest.fn(),
-}
 
 describe("<Header />", () => {
   beforeEach(() => {
-    render(<Header {...mockProps} />)
+    const mockIntersectionObserver = jest.fn();
+  mockIntersectionObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null
+  });
+  window.IntersectionObserver = mockIntersectionObserver;
+
+    render(<Header  />)
   })
 
   it("header-section is in the document", () => {
@@ -34,15 +38,14 @@ describe("<Header />", () => {
       smooth: true, 
       duration: 500
     })
+  }) 
+  it("<DonateButton /> is in the document", () => {
+    const donateBtn = screen.getByTestId("donate-btn")
+    expect(donateBtn).toBeInTheDocument()
   })
-  it("menu icon is in the document and calls showMenu on click", () => {
-    const menuIcon = screen.getByTestId("menu-icon")
-    expect(menuIcon).toBeInTheDocument()
-    act(() => {
-      fireEvent.click(menuIcon)
-    })
-    expect(mockProps.setShowMenu).toHaveBeenCalled()
+  it("matches snapshot", () => {
+    const header = screen.getByTestId("header-section")
+    expect(header).toMatchSnapshot()
+
   })
-  //it("menu links are in the document", () => {})
-  //it("matches snapshot", () => {})
 })

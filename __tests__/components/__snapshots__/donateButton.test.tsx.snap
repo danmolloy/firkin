@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DonateButton /> matches snapshot 1`] = `
+<form
+  action="/donate/api"
+  data-testid="donate-btn"
+  method="POST"
+>
+  <button
+    class="hover:text-yellow-400 rounded font-bold text-lg font-text"
+    role="link"
+    type="submit"
+  >
+    Donate
+  </button>
+</form>
+`;
