@@ -13,7 +13,7 @@ const robotoMono = Montserrat({weight: "400", subsets: ["latin"], variable: '--f
 
 export const metadata: Metadata = {
   title: "The Big Firkin Band",
-  description: "17-piece jazz big band sensation in South East London.",
+  description: "17-piece jazz big band sensation in South East London. Live at the Fox & Firkin on the second Sunday of every month 3:30pm-6pm!",
 };
 
 export default function RootLayout({
