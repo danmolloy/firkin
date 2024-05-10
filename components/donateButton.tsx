@@ -32,8 +32,8 @@ const stripePromise =
               <Confetti
         recycle={false}
         numberOfPieces={200}
-      width={1000}
-      height={1000}
+      width={window.innerWidth}
+      height={window.innerHeight}
     />
     <p className=' rounded font-bold text-lg font-text' >
             Thank You!
