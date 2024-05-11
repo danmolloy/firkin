@@ -12,11 +12,12 @@
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
     "@googleapis/docs": "^3.0.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@stripe/stripe-js": "^3.2.0",
     "axios": "^1.6.8",
     "cliui": "^8.0.1",
     "formik": "^2.4.5",
-    "googleapis": "^134.0.0",
+    "googleapis": "^137.1.0",
     "luxon": "^3.4.4",
     "next": "^14.1.4",
     "nodemailer": "^6.9.13",

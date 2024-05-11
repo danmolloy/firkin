@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Musicians from "@/components/musicians";
 import { DateTime } from "luxon";
+import NewsletterIndex from "./newsletter";
 
 async function getData() {
   const API_KEY = process.env.API_KEY
@@ -54,6 +55,7 @@ export default async function Home() {
         <div id="upper" className="flex flex-col">
           <About />
           <Calendar events={calendar.length > 0 ? calendar : []} />
+        {/* <NewsletterIndex /> */}
         </div>
         <Musicians />
         <ContactForm />

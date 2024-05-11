@@ -15,11 +15,11 @@ export default function ContactForm() {
 
   return (
       <div data-testid="contact-form" id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-black text-white'>
+              {/* <h2 className="text-2xl">Contact us</h2> */}
               <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
-                <p className='text-gray-300'>Get info on upcoming gigs and events.</p>
-{/*                 <p>Follow on instagram</p>
- */}              </div>
+                <p className='text-gray-500'>Get info on upcoming gigs and events.</p>
+              </div>
 
     <Formik    
     initialValues={{
