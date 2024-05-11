@@ -7,7 +7,7 @@ import axios from "axios";
 export default function ContactForm() {
   const [sendStatus, setSendStatus] = useState<"success"|"sending"|"err"|null>(null)
 
-  const sendFail = (<div><h2 className="text-2xl">Message failed to send.</h2> <p>Please <a href='mailto:fiokelly@gmail.com' className='text-blue-500'>send an email</a>.</p></div>)
+  const sendFail = (<div><h2 className="text-2xl">Message failed to send.</h2> <p>Please <a href='mailto:ekelly100@hotmail.com' className='text-blue-500'>send an email</a>.</p></div>)
 
   const sendSuccess = (<div><h2 className="text-2xl">Message recieved!</h2><p>We will get back to you as soon as possible.</p></div>)
 
@@ -49,8 +49,12 @@ export default function ContactForm() {
           actions.setSubmitting(false)
           actions.resetForm()
         } else {
+          actions.setSubmitting(false)
           setSendStatus("err")
         }
+        }).catch(e => {
+          actions.setSubmitting(false)
+          setSendStatus("err")
         })
        }}> 
       {(props) => (
