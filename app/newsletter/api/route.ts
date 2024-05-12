@@ -7,7 +7,7 @@ client.setConfig({
 
 
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request): Promise<Response> {
   const req = await request.json()
   console.log(req.email)
   try {
@@ -21,7 +21,7 @@ export async function POST(request: Request, response: Response) {
   }
   catch(e) {
     console.log(e)
-    return Response
+    return new Response("Error submitting email", {status: 500})
 
   }
 }

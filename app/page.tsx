@@ -55,7 +55,7 @@ export default async function Home() {
         <div id="upper" className="flex flex-col">
           <About />
           <Calendar events={calendar.length > 0 ? calendar : []} />
-        {/* <NewsletterIndex /> */}
+        <NewsletterIndex />
         </div>
         <Musicians />
         <ContactForm />
