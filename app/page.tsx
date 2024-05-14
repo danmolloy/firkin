@@ -1,7 +1,6 @@
 import About from "@/components/about";
 import Calendar from "@/components/calendar";
 import ContactForm from "@/components/contactForm";
-import EventTile from "@/components/eventTile";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
