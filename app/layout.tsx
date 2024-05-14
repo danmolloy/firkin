@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Irish_Grover, Inconsolata, Nunito, Kanit, Hammersmith_One, Special_Elite, Abril_Fatface, Notable, Medula_One, Roboto, Roboto_Mono, Montserrat } from "next/font/google";
+import { Abril_Fatface, Notable, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const inconsolata = Inconsolata({weight: "400", subsets: ["latin"], variable: '--font-inconsolata' })
-const nunito = Nunito({weight: "400", subsets: ["latin"], variable: '--font-nunito' })
-const irishGrover = Irish_Grover({ weight: "400", subsets: ["latin"], variable: '--font-irish-grover' })
 const abrilFatface = Abril_Fatface({ weight: "400", subsets: ["latin"], variable: '--font-abril-fatface' })
 const notable = Notable({weight: "400", subsets: ["latin"], variable: '--font-notable' })
-const specialElite = Special_Elite({weight: "400", subsets: ["latin"], variable: '--font-special-elite' })
 const robotoMono = Montserrat({weight: "400", subsets: ["latin"], variable: '--font-roboto-mono' })
 
 export const metadata: Metadata = {
@@ -22,10 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${irishGrover.variable} ${inter.variable} ${nunito.variable} ${inconsolata.variable} ${abrilFatface.variable} ${notable.variable} ${specialElite.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${abrilFatface.variable} ${notable.variable} ${robotoMono.variable}`}>
       <body >
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }

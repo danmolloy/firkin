@@ -15,8 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         text: ['var(--font-roboto-mono)'],
-        display: ['var(--font-notable)', 'var(--font-abril-fatface)'/* 'var(--font-irish-grover)' */],
-        title: ['var(--font-special-elite)'],
+        display: ['var(--font-notable)', 'var(--font-abril-fatface)'],
       },
     },
   },
