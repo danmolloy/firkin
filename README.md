@@ -1,13 +1,13 @@
 # Band Website
 ## Overview
-This is a personal website for a jazz big band, targeting concert promoters and audience members. It showcases an about section, stripe checkout integration, events calendar, information about the musicians and a contact form/newsletter signup.
+This is a personal website for a jazz big band, targeting concert promoters and audience members. It showcases an about section, stripe checkout integration, events calendar, information about the musicians, contact form and newsletter signup.
 Technically, the project has a focus on optimized data fetching, UI/UX design, performance and accessibility.
 
 ## Features
 ### User Experience
 - **Events Calendar** fetched via a Server Component from a public Google Calendar. A variety of errors are handled such as a request error, vacant event fields or no events. To keep the calendar up to date, the data is not cached.
 - **Stripe Checkout** to accept donations is integrated. Upon a successful transaction, there is a thank you message with confetti covering the window.
-- **Contact Form** rigourously tested to provide a seamless experience, complete with validation, error messages and feedback.
+- **Contact Form and Newsletter sign up** both rigourously tested to provide a seamless experience, complete with validation, error messages and feedback.
 - **Responsive Design** built with a mobile-first philosophy. The website has a number if features unique to mobile view, such as a fly out menu and relocated photos from text sections to the photo gallery.
 - **Color changing on scroll** built on scroll event listeners, the header text changes color on scroll to contrast the background.
 - **Interactive Experience** gently scroll with React Scroll on menu link click, ensuring a smooth user experience. Additionally, upon a successful donation payment, confetti sprays across the screen.
@@ -31,13 +31,13 @@ Although essentially a static website, measures have been taken to improve perfo
 - TypeScript
 - Tailwind CSS
 - Jest & React Testing Library
-- Formik, Yup and Nodemailer
+- Formik, Yup, MailChimp API (newsletter sign up) and Nodemailer (contact form)
 - Axios
 - Stripe
 - React Scroll & React-confetti
 
 ## Testing
-Unit tests with Jest and React Testing Library achieve a very high code coverage threshold, focusing on maintaining a consistent UI, critical logic and data fetching errors. An array of Jest matchers (e.g., .toBe, .toEqual, .toBeInTheDocument) are leveraged for effective assertions. Predictable UI output is maintained with snapshot tests for all components. Test suites are regularly reviewed to ensure failures are swiftly captured, and the site continues to be manually tested across a variety of screen sizes. Additionally, CSS effects such as color changing text in the header is manually tested.
+Unit tests with Jest and React Testing Library achieve a very high code coverage threshold (82.95%), focusing on maintaining a consistent UI, critical logic and data fetching errors. An array of Jest matchers (e.g., .toBe, .toEqual, .toBeInTheDocument) are leveraged for effective assertions. Predictable UI output is maintained with snapshot tests for all components. Test suites are regularly reviewed to ensure failures are swiftly captured, and the site continues to be manually tested across a variety of screen sizes. Additionally, CSS effects such as color changing text in the header is manually tested.
 
 ## Accessibility
 The site has been created with the aim of an inclusive experience for all users. It is continually tested and improved to adhere to Web Content Accessibility Guidelines (WCAG) 2.0 conformance standards, levering tools such as Google Lighthouse (scoring 100/100), ESLint (including `eslint-plugin-jsx-a11y` extension) and Chrome DevTools.

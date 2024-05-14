@@ -21,7 +21,7 @@ describe("<ContactSection />", () => {
     expect(contactForm).toBeInTheDocument()
   })
   it("'Contact' title is in the document", () => {
-    const contactTitle = screen.getByText("Join our Mailing List")
+    const contactTitle = screen.getByText("Contact us")
     expect(contactTitle).toBeInTheDocument()
   })
 
@@ -39,7 +39,7 @@ describe("<ContactSection />", () => {
     expect(emailInput).toHaveAttribute("type", "email")
   })
   it("message input is in the document with label, name, type & maxLength attrs", () => {
-    const messageInput = screen.getByLabelText("Message Optional")
+    const messageInput = screen.getByLabelText("Message")
     expect(messageInput).toBeInTheDocument()
     expect(messageInput).toHaveAttribute("name", "message")
     expect(messageInput).toHaveAttribute("type", "textarea")
@@ -73,7 +73,7 @@ describe("<ContactSection />", () => {
     act(() => {
       fireEvent.change(emailInput, {target: { value: fakeEmail}})
     })
-    const messageInput = screen.getByLabelText("Message Optional")
+    const messageInput = screen.getByLabelText("Message")
     act(() => {
       fireEvent.change(messageInput, {target: { value: fakeMsg}})
     })

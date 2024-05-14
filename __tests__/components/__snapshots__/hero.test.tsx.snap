@@ -36,11 +36,11 @@ exports[`<Hero /> matches snapshot 1`] = `
       data-testid="next-gig"
       href="/#calendar"
     >
-      <h3
+      <h2
         class=""
       >
         Next gig:
-      </h3>
+      </h2>
       <p
         class=" md:text-3xl text-xl"
         data-testid="start-time"
@@ -53,7 +53,7 @@ exports[`<Hero /> matches snapshot 1`] = `
         <p
           data-testid="start-time"
         >
-          01:43 AM
+          1:43 AM
            @ 
           FoxNFirkin
         </p>

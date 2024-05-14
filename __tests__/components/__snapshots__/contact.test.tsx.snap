@@ -9,16 +9,8 @@ exports[`<ContactSection /> matches snapshot 1`] = `
   <h2
     class="text-2xl"
   >
-    Join our Mailing List
+    Contact us
   </h2>
-  <div>
-    <p
-      class="text-gray-300"
-    >
-      Get info on upcoming gigs and events.
-    </p>
-                  
-  </div>
   <form
     action="#"
     class=" flex flex-col md:w-4/5 lg:w-1/2 "
@@ -71,11 +63,6 @@ exports[`<ContactSection /> matches snapshot 1`] = `
         for="msg-text"
       >
         Message 
-        <span
-          class="text-sm text-gray-500"
-        >
-          Optional
-        </span>
       </label>
       <textarea
         class=" text-black border border-zinc-400 rounded-md w-full p-1 "

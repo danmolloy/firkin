@@ -66,7 +66,7 @@ describe("<NewsletterIndex />", () => {
       await new Promise(resolve => setTimeout(resolve, 1000))
     })
 
-    expect(mockPost).toHaveBeenCalledWith("/newsletter", {
+    expect(mockPost).toHaveBeenCalledWith("/newsletter/api", {
       email: fakeEmail,
     })
 

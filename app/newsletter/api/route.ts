@@ -1,3 +1,5 @@
+import { NextResponse } from 'next/server'
+
 const client = require("@mailchimp/mailchimp_marketing");
 
 client.setConfig({
@@ -15,13 +17,13 @@ export async function POST(request: Request): Promise<Response> {
       email_address: req.email,
       status: "pending",
     });
-    console.log(response);
-    return new Response("Success!", {status: 200})
+    console.log("response");
+    return NextResponse.json(response)
 
   }
   catch(e) {
-    console.log(e)
-    return new Response("Error submitting email", {status: 500})
+    console.log("e")
+    return NextResponse.json(e)
 
   }
 }

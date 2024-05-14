@@ -7,18 +7,18 @@ import axios from "axios";
 export default function NewsletterIndex() {
   const [sendStatus, setSendStatus] = useState<"success"|"sending"|"err"|null>(null)
 
-  const sendFail = (<div><h2 className="text-2xl">Sign up failed.</h2> <p>Please try again or contact us.</p></div>)
+  const sendFail = (<div><h2 className="text-md">Sign up failed.</h2> <p className='text-sm text-gray-600'>Please try again or contact us.</p></div>)
 
-  const sendSuccess = (<div><h2 className="text-2xl">Sign up successful!</h2></div>)
+  const sendSuccess = (<div><h2 className="text-md">Sign up successful!</h2> <p className='text-sm'>You have been sent a confirmation email.</p></div>)
 
-  const sendingMsg = (<div><h2 className="text-2xl">Submitting...</h2></div>)
+  const sendingMsg = (<div><h2 className="text-md">Submitting...</h2></div>)
 
   return (
       <div data-testid="newsletter-form" id="dark-section" className=' px-8 py-8 flex flex-col bg-white text-black'>
-              <div className='border border-zinc-400 shadow rounded md:w-4/5 lg:w-1/2 p-2'>
-              <h2 className="text-2xl">Join our Mailing List</h2>
+              <div className='border  shadow rounded md:w-4/5 lg:w-1/2 p-2'>
+              <h2 className="text-xl">Join our Mailing List</h2>
               <div>
-                <p className='text-gray-500'>Get info on upcoming gigs and events.</p>
+                <p className='text-gray-500 '>Get info on upcoming gigs and events.</p>
               </div>
 
     <Formik    
@@ -36,13 +36,14 @@ export default function NewsletterIndex() {
       axios.post("/newsletter/api", values)
       .then(async (res) => {
         console.log('Response received')
-        if (res.status === 200) {
+        if (res.data.status === 200) {
           setSendStatus("success")
           actions.setSubmitting(false)
           actions.resetForm()
         } else {
           actions.setSubmitting(false)
           setSendStatus("err")
+          console.log(JSON.stringify(res))
         }
         }).catch(e => {
           actions.setSubmitting(false)
@@ -66,9 +67,10 @@ export default function NewsletterIndex() {
           </ErrorMessage>
           </div>
           </div>
-          
-        <button disabled={props.isSubmitting || sendStatus === "sending"} id="submit-button" type='submit' className="disabled:opacity-30 hover:bg-blue-100 border shadow-sm border-blue-500 text-blue-500 m-2 p-1 w-24 rounded self-end">Submit</button>
-        <div>
+          <div>
+        <div className='flex flex-row-reverse justify-between'>
+        <button disabled={props.isSubmitting || sendStatus === "sending"} id="submit-button" type='submit' className="disabled:opacity-30 hover:bg-blue-400 border shadow-sm  bg-blue-500 text-white m-2 p-1 w-24 rounded self-end">Submit</button>
+
         {sendStatus === "sending" 
         ? sendingMsg
         : sendStatus === "err" 
@@ -76,6 +78,7 @@ export default function NewsletterIndex() {
         : sendStatus === "success" 
         ? sendSuccess
         : null}
+      </div>
       </div>
       </Form> )}
     </Formik>
