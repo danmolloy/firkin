@@ -22,7 +22,7 @@ export default function Musicians() {
       <div data-testid="band-leader" className="py-4 flex flex-col">
         <h3 className="text-xl pb-1 font-text">Bandleader</h3>
         <p className="pb-4 text-lg">
-        Eoghan Kelly is a Trombone player originally from Cork City and now based in Catford. Along with directing The Big Firkin Band he plays with a number of other Big Bands in London and freelances with  bands, orchestras and ensembles all over Britain and Ireland. He frequently performs in West End shows and London Jazz venues. He has recorded and performed with many Jazz, Classical and Rock artists including Georgie Fame, the National Symphony Orchestra and Sinead O'Connor. Touring credits include Liam Gallagher, Blur and Florence And The Machine.         
+        Eoghan Kelly is a Trombone player originally from Cork City and now based in Catford. Along with directing The Big Firkin Band he plays with a number of other Big Bands in London and freelances with  bands, orchestras and ensembles all over Britain and Ireland. He frequently performs in West End shows and London Jazz venues. He has recorded and performed with many Jazz, Classical and Rock artists including Georgie Fame, the National Symphony Orchestra and Sinead O&apos;Connor. Touring credits include Liam Gallagher, Blur and Florence And The Machine.         
         </p>
         <p className="text-lg">
         Eoghan also has a busy teaching schedule working with Lewisham Music, providing music lessons to young musicians of all abilities throughout the Borough of Lewisham.
