@@ -22,7 +22,7 @@ async function getData() {
       return {items: []}
       /* throw new Error('Failed to fetch data') */
     }
-    console.log(res.body);
+    console.log(JSON.stringify(res.body));
     return res.json()
   } catch (e) {
     console.log(`Error: ${e}`);
@@ -48,9 +48,9 @@ export default async function Home() {
   //const [showHeader, setShowHeader] = useState<boolean>(true)
   //const [showMenu, setShowMenu] = useState<boolean>(false)
   const data = await getData()
-  const calendar: Event[] = []/* data.items.sort((a:Event, b:Event) => 
+  const calendar: Event[] = data.items.filter((i: Event) => i.start !== undefined).sort((a:Event, b:Event) => 
     new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()).filter((i: Event) => 
-      DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now()) */
+      DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
 
   return (
     <main className="flex flex-col text-black bg-slate-50 " data-testid="main-page">
