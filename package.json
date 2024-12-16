@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@sentry/nextjs": "^8",
     "@stripe/stripe-js": "^3.2.0",
     "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.8",
