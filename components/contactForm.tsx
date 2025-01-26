@@ -7,11 +7,11 @@ import axios from "axios";
 export default function ContactForm() {
   const [sendStatus, setSendStatus] = useState<"success"|"sending"|"err"|null>(null)
 
-  const sendFail = (<div><h2 className="text-2xl">Message failed to send.</h2> <p>Please <a href='mailto:ekelly100@hotmail.com' className='text-blue-500'>send an email</a>.</p></div>)
+  const sendFail = (<div><h2 className="text-xl">Message failed to send.</h2> <p>Please <a href='mailto:ekelly100@hotmail.com' className='text-blue-500'>send an email</a>.</p></div>)
 
-  const sendSuccess = (<div><h2 className="text-2xl">Message recieved!</h2><p>We will get back to you as soon as possible.</p></div>)
+  const sendSuccess = (<div><h2 className="text-xl">Message recieved!</h2><p>We will get back to you as soon as possible.</p></div>)
 
-  const sendingMsg = (<div><h2 className="text-2xl">Message sending...</h2></div>)
+  const sendingMsg = (<div><h2 className="text-xl">Message sending...</h2></div>)
 
   return (
       <div data-testid="contact-form" id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-black text-white'>
@@ -39,23 +39,22 @@ export default function ContactForm() {
         .required('message required')
     })}
     onSubmit={async (values, actions ) => {
-      setSendStatus("sending")
+       setSendStatus("sending")
       await new Promise(resolve => setTimeout(resolve, 1000))
       axios.post("/api", values)
-      .then(async (res) => {
-        console.log('Response received')
-        if (res.status === 200) {
-          setSendStatus("success")
-          actions.setSubmitting(false)
-          actions.resetForm()
-        } else {
-          actions.setSubmitting(false)
-          setSendStatus("err")
-        }
-        }).catch(e => {
-          actions.setSubmitting(false)
-          setSendStatus("err")
-        })
+      .then(() => {
+        setSendStatus("success")
+        actions.resetForm()
+      })
+      .catch((error) => {
+        setSendStatus("err")
+        const errorMessage =
+          error.response.data.error || 'An unexpected error occurred.';
+        actions.setStatus(errorMessage);
+      })
+      .finally(() => {
+        actions.setSubmitting(false);
+      });
        }}> 
       {(props) => (
       <Form  className=" flex flex-col md:w-4/5 lg:w-1/2 ">
