@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { animateScroll } from "react-scroll";
 import DonateButton from "./donateButton";
+import Image from "next/image";
 
 
 export const menuItems: {title: string}[] = [
@@ -64,10 +65,12 @@ export default function Header() {
 
   return (
 
-    <div data-testid="header-section" className={`${ isIntersecting || (!isIntersecting && !isUpperHalf) ? "text-white" : "text-black"}  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 backdrop-blur z-20`}>
-<button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
+    <div data-testid="header-section" className={`  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 bg-white z-20`}>
+      <Image src={"/header-text.png"} alt="The Big Firkin Band" width={3966/15} height={466/15} className="" />
 
-<DonateButton />
-</div>
+{/* <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
+ */}
+{/* <DonateButton />
+ */}</div>
   )
 }

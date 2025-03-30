@@ -16,6 +16,8 @@ const config: Config = {
       fontFamily: {
         text: ['var(--font-roboto-mono)'],
         display: ['var(--font-notable)', 'var(--font-abril-fatface)'],
+        announce: ['var(--font-rock-salt)','var(--font-roboto-mono)'],
+        title: ['var(--font-kirang-haerang)', 'var(--font-roboto-mono)']
       },
     },
   },

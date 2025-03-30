@@ -7,6 +7,9 @@ import Hero from "@/components/hero";
 import Musicians from "@/components/musicians";
 import { DateTime } from "luxon";
 import NewsletterIndex from "./newsletter";
+import Image from "next/image";
+import Link from "next/link";
+import PosterHero from "@/components/posterHero";
 
 async function getData() {
   try {
@@ -34,7 +37,7 @@ async function getData() {
 export type Event = {
   id: string
   summary: string
-  location: string
+  location?: string
   description: string
   start: {
     dateTime: Date
@@ -53,19 +56,23 @@ export default async function Home() {
       DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
 
   return (
-    <main className="flex flex-col text-black bg-slate-50 " data-testid="main-page">
-      <Header /* setShowMenu={() => setShowMenu(!showMenu)} setShowHeader={(arg) => setShowHeader(arg)} *//>
-      <Hero nextGig={calendar[0]} />
-      <div id="light" className="z-10 font-text ">
-        <div id="upper" className="flex flex-col">
-          <About />
-          <Calendar events={calendar.length > 0 ? calendar : []} />
-        <NewsletterIndex />
-        </div>
-        <Musicians />
-        <ContactForm />
-        <Footer />
+    <main className="flex flex-col text-black bg-[url(/bg-pattern.png)] bg-repeat " data-testid="main-page">
+      <div className="absolute top-0 right-0 w-1/2 h-[93vh] mt-14">
+    <div className="relative w-full h-full ">
+      <Image alt="Blue background" src={"/teal-splash.png"} fill={true} />
+    </div>
+  </div>
+  <div className="z-10">
+      <Header />
+      <PosterHero nextGig={calendar[0]} />
+      <About />
+      <Calendar events={calendar.length > 0 ? calendar : []} />
+{/*       <NewsletterIndex />
+ */}      <Musicians />
+      <ContactForm />
+      <Footer />
       </div>
+     
     </main>
   );
 }

@@ -35,12 +35,12 @@ const stripePromise =
       width={window.innerWidth}
       height={window.innerHeight}
     />
-    <p className=' rounded font-bold text-lg font-text' >
+    <p className=' rounded font-title text-lg ' >
             Thank You!
           </p>
               </div>
               
-          : <button className='hover:text-yellow-400 rounded font-bold text-lg font-text' type="submit" role="link">
+          : <button className='hover:text-yellow-400 rounded font-title text-lg ' type="submit" role="link">
             Donate
           </button>}
       </form>
