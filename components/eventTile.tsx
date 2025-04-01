@@ -13,8 +13,11 @@ export default function EventTile(props: EventTileProps) {
         <p className=" text-lg" data-testid="start-time">{DateTime.fromJSDate(new Date(event.start.dateTime)).toFormat("dd LLL yyyy")}</p>
         <p data-testid="date">{DateTime.fromJSDate(new Date(event.start.dateTime)).setZone('Europe/London').toFormat("hh:mm a")}</p>
       </div>
-        <p data-testid="location">@ <a target="_blank" className="text-blue-600 hover:underline" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}>{event.location}</a>
-        </p>  
+      {
+        event.location 
+        ? <p data-testid="location">@ <a target="_blank" className="text-blue-600 hover:underline" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}>{event.location}</a></p>  
+        : <p>Venue TBC</p>
+      }
         <p data-testid="desription">{event.description}</p>
       </div>
   )

@@ -31,7 +31,7 @@ export default function Hero(props: HeroProps) {
           <h2 className="">Next gig:</h2>
           <p className=" md:text-3xl text-xl" data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("dd LLL yyyy")}</p>
           <div className="flex flex-row items-center">
-          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("h:mm a")} @ {nextGig.location.split(",")[0]}</p>
+          <p data-testid="start-time">{DateTime.fromJSDate(new Date(nextGig.start.dateTime)).setZone('Europe/London').toFormat("h:mm a")} @ {nextGig.location ? nextGig.location.split(",")[0] : "Venue TBC"}</p>
             </div>
           </Link>}
           <div className="flex flex-row mb-2 mt-2 md:mt-4">
