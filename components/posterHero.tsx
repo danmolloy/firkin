@@ -12,10 +12,10 @@ export default function PosterHero(props: HeroProps) {
   const { nextGig } = props;
 
   return (
-    <div className="flex flex-col items-center justify-between h-screen w-[100vw] ">
+    <div className="flex flex-col items-center justify-between h-[100dvh] w-[100vw] ">
             <Image className=" mt-20 mx-2" alt="The Big Firkin Band: 17-piece jazz big band sensation!" src="/hero-text.png" height={494/2} width={1180/2}/>
             <div className="flex flex-row">
-            <p className="font-title w-[50vw] lg:ml-[16vw] text-blue-950 text-2xl md:text-3xl px-2 font-bold  self-center">Live at the Fox & Firkin 2nd Sunday of the month 3:30pm-6pm!</p>
+            <p className="font-title w-[50vw] lg:ml-[16vw] text-blue-950 backdrop-blur-sm text-xl md:text-3xl px-2 font-bold  self-center">Live at the Fox & Firkin 2nd Sunday of the month 3:30pm-6pm!</p>
             <div className="flex flex-col">
             {nextGig !== undefined && 
               <Link data-testid="next-gig" href={'/#calendar'} className="border-2 border-blue-950 rounded mx-4 hover:cursor-pointer hover:text-blue-900 text-blue-900 font-announce text-2xl md:text-3xl  lg:mr-[10vw] self-end px-2">
@@ -35,6 +35,6 @@ export default function PosterHero(props: HeroProps) {
 
           </div>
             <Image className="" src="/band-members.png" alt="The Big Firkin Band" height={298} width={716} />
-          </div>
+            </div>
   )
 }
