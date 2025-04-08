@@ -4,10 +4,10 @@ import eoghanKelly from '../public/eoghanKelly.jpg'
 
 export default function Musicians() {
   return (
-    <div id="dark-section" data-testid="musicians-section" className="p-8 flex flex-col bg-white text-blue-900">
-      <h2 className="text-2xl font-text">Musicians</h2>
+    <div id="dark-section" data-testid="musicians-section" className="p-8 flex flex-col bg-white text-blue-950 font-text">
+      <h2 className="text-2xl ">Musicians</h2>
       <div data-testid="band-musicians " className="py-4 flex flex-col">
-        <h3 className="text-xl pb-1 font-text">The Band</h3>
+        <h3 className="text-xl pb-1 ">The Band</h3>
         <p className="pb-4 text-lg">
         As of January 2024 members of the band can currently be seen and heard performing in Cabaret at the Kit Kat Club, Guys & Dolls at The Bridge Theatre, My Neighbour Totoro at the Barbican, The Witches at The National Theatre, along with Old Friends, Les Miserables, Wicked and Phantom Of The Opera in the West End, plus a number of nationally touring productions.
         </p>
@@ -20,7 +20,7 @@ export default function Musicians() {
         <Image data-testid={"band-img"} src={bandDetail} width={500} alt="The band performing live at the Fox & Firkin" title="The band performing live at the Fox & Firkin" className="self-center"/>
       </div>
       <div data-testid="band-leader" className="py-4 flex flex-col">
-        <h3 className="text-xl pb-1 font-text">Bandleader</h3>
+        <h3 className="text-xl pb-1 ">Bandleader</h3>
         <p className="pb-4 text-lg">
         Eoghan Kelly is a Trombone player originally from Cork City and now based in Catford. Along with directing The Big Firkin Band he plays with a number of other Big Bands in London and freelances with  bands, orchestras and ensembles all over Britain and Ireland. He frequently performs in West End shows and London Jazz venues. He has recorded and performed with many Jazz, Classical and Rock artists including Georgie Fame, the National Symphony Orchestra and Sinead O&apos;Connor. Touring credits include Liam Gallagher, Blur and Florence And The Machine.         
         </p>

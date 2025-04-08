@@ -14,10 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        text: ['var(--font-roboto-mono)'],
-        display: ['var(--font-notable)', 'var(--font-abril-fatface)'],
-        announce: ['var(--font-rock-salt)','var(--font-roboto-mono)'],
-        title: ['var(--font-kirang-haerang)', 'var(--font-roboto-mono)']
+        text: ['var(--font-quicksand)'],
+        title: ['var(--font-unkempt)', 'var(--font-quicksand)']
       },
     },
   },

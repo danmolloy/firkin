@@ -14,7 +14,7 @@ export default function ContactForm() {
   const sendingMsg = (<div><h2 className="text-xl">Message sending...</h2></div>)
 
   return (
-      <div data-testid="contact-form" id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-white text-blue-900'>
+      <div data-testid="contact-form" id="dark-section" className='px-8 pt-8 pb-16 flex flex-col bg-white text-blue-950 font-text'>
               <h2 className="text-2xl">Contact us</h2>
               {/* <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
