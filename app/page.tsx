@@ -80,7 +80,5 @@ export default async function Home() {
 
 /* 
 Sumup link
-Free Entry
-Menu with Donate Btn
 Calendar Bug
 */
