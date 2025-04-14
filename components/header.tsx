@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { animateScroll } from "react-scroll";
 import DonateButton from "./donateButton";
 import Image from "next/image";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GrInstagram } from "react-icons/gr";
+import Link from "next/link";
+
 
 
 export const menuItems: {title: string}[] = [
@@ -71,6 +75,15 @@ export default function Header() {
 {/* <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
  */}
 {/* <DonateButton />
- */}</div>
+ */}
+ <div className="flex flex-row items-center text-2xl">
+ <Link className="mx-2 md:mx-6" href="https://www.instagram.com/thebigfirkinband/"  target="_blank">
+ <GrInstagram />
+ </Link>
+ <button className="">
+  <GiHamburgerMenu />
+ </button>
+ </div>
+ </div>
   )
 }
