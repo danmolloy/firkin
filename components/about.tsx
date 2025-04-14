@@ -3,7 +3,7 @@ import bandSunshine from "../public/bandSunshine.png"
 
 export default function About() {
   return (
-    <div data-testid="about-section"  className="p-8 lg:px-16 flex flex-col py-12 bg-white text-blue-950 font-text">
+    <div id="about" data-testid="about-section"  className="pt-16 px-8  lg:px-16 flex flex-col py-12 bg-white text-blue-950 font-text">
       <h2 className="text-2xl text-blue-950">About</h2>
       <div data-testid="about-blurb" className="py-4  text-lg">
         <p className="">

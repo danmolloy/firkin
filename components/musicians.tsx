@@ -4,7 +4,7 @@ import eoghanKelly from '../public/eoghanKelly.jpg'
 
 export default function Musicians() {
   return (
-    <div id="dark-section" data-testid="musicians-section" className="p-8 flex flex-col bg-white text-blue-950 font-text">
+    <div id="musicians" data-testid="musicians-section" className="pt-16 px-8 flex flex-col bg-white text-blue-950 font-text">
       <h2 className="text-2xl ">Musicians</h2>
       <div data-testid="band-musicians " className="py-4 flex flex-col">
         <h3 className="text-xl pb-1 ">The Band</h3>

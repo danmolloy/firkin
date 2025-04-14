@@ -6,6 +6,7 @@ import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrInstagram } from "react-icons/gr";
 import Link from "next/link";
+import Menu from "./menu";
 
 
 
@@ -27,7 +28,7 @@ export const menuItems: {title: string}[] = [
 export default function Header() {
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
   const [isUpperHalf, setIsUpperHalf] = useState<boolean>(true)
-
+  const [showMenu, setShowMenu] = useState(false)
   useEffect(() => {
     const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -77,13 +78,15 @@ export default function Header() {
 {/* <DonateButton />
  */}
  <div className="flex flex-row items-center text-2xl">
- <Link className="mx-2 md:mx-6" href="https://www.instagram.com/thebigfirkinband/"  target="_blank">
+ <Link className="mx-2 md:mx-6 hover:text-slate-500" href="https://www.instagram.com/thebigfirkinband/"  target="_blank">
  <GrInstagram />
  </Link>
- <button className="">
+ <div>
+ <button className="p-1 hover:text-slate-500" onClick={() => setShowMenu(!showMenu)}>
   <GiHamburgerMenu />
  </button>
- </div>
+ {showMenu && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
+ </div></div>
  </div>
   )
 }
