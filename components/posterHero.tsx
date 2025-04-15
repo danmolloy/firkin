@@ -14,8 +14,9 @@ export default function PosterHero(props: HeroProps) {
   return (
     <div className="flex flex-col items-center justify-between h-[100dvh] w-[100vw] font-title">
             <div>
-            <Image className="absolute top-10 z-10" src="/free-entry.png" width={140} height={140} alt="Free Entry" />
-
+              <div className="absolute top-11 z-10  h-24 w-24 md:h-32  md:w-32">
+            <Image className="" src="/free-entry.png" fill={true} /* width={140} height={140} */ alt="Free Entry" />
+            </div>
             <Image className=" mt-20 mx-2 p-2" alt="The Big Firkin Band" src="/hero-text.png" height={206} width={582}/>
             <Image className="px-2" src="/hero-tagline-black.png" alt="17-piece jazz big band sensation!" width={547} height={28} />
             </div>
