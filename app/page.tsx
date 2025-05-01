@@ -56,7 +56,7 @@ export default async function Home() {
       DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
 
   return (
-    <main className="flex flex-col text-black bg-[url(/bg-pattern.png)] bg-repeat" data-testid="main-page">
+    <main className="flex flex-col text-black bg-[url(/bg-pattern.png)] bg-repeat font-text" data-testid="main-page">
       <div className="absolute top-0 right-0 w-1/2 h-[93vh] mt-14">
     <div className="relative w-full h-full ">
       <Image alt="Blue background" src={"/teal-splash.png"} fill={true} />

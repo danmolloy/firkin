@@ -5,7 +5,7 @@ import { animateScroll } from "react-scroll";
 
 export default function Footer() {
   return (
-    <div data-testid="footer-section" className="h-20 bg-white text-blue-950  border-t border-gray-600 px-4 font-text flex flex-col items-center justify-center">
+    <div data-testid="footer-section" className="h-20 bg-[#76eaf0] text-black  border-t border-gray-600 px-4 font-text flex flex-col items-center justify-center">
       <button 
         className="hover:underline p-2"
         onClick={() => animateScroll.scrollToTop({

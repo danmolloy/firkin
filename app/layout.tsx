@@ -3,7 +3,7 @@ import { Unkempt, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 
-const quicksand = Quicksand({weight: "400", subsets: ["latin"], variable: '--font-quicksand' })
+const quicksand = Quicksand({weight: ["300", "400", "500", "600", "700"], subsets: ["latin"], variable: '--font-quicksand' })
 const title = Unkempt({weight: "400", subsets: ["latin"], variable: '--font-unkempt'})
 export const metadata: Metadata = {
   title: "The Big Firkin Band",
