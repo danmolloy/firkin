@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
 import { animateScroll } from "react-scroll";
-import DonateButton from "./donateButton";
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrInstagram } from "react-icons/gr";
