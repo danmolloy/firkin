@@ -4,9 +4,9 @@ import eoghanKelly from '../public/eoghanKelly.jpg'
 
 export default function Musicians() {
   return (
-    <div id="musicians" data-testid="musicians-section" className="pt-16 px-8 flex flex-col bg-white text-lg font-light text-blue-950 font-text">
-      <h2 className="text-3xl text-black font-semibold border-b-2 border-[#49cfd6]">Musicians</h2>
-      <div data-testid="band-musicians " className="py-4 flex flex-col">
+    <div id="musicians" data-testid="musicians-section" className="pt-16 px-8 flex flex-col bg-white text-lg font-normal text-black font-text">
+      <h2 className="text-3xl text-black font-semibold border-b border-zinc-400">Musicians</h2>
+      <div data-testid="band-musicians " className="py-4 pb-8 flex flex-col">
         <h3 className="text-xl pb-1 font-semibold">The Band</h3>
         <p className="pb-4 text-lg">
         As of January 2024 members of the band can currently be seen and heard performing in Cabaret at the Kit Kat Club, Guys & Dolls at The Bridge Theatre, My Neighbour Totoro at the Barbican, The Witches at The National Theatre, along with Old Friends, Les Miserables, Wicked and Phantom Of The Opera in the West End, plus a number of nationally touring productions.
@@ -19,7 +19,7 @@ export default function Musicians() {
         </p>
         <Image data-testid={"band-img"} src={bandDetail} width={500} alt="The band performing live at the Fox & Firkin" title="The band performing live at the Fox & Firkin" className="self-center"/>
       </div>
-      <div data-testid="band-leader" className="py-4 flex flex-col ">
+      <div data-testid="band-leader" className="py-4 pb-8 flex flex-col ">
         <h3 className="text-xl pb-1 font-semibold">Bandleader</h3>
         <p className="pb-4 text-lg">
         Eoghan Kelly is a Trombone player originally from Cork City and now based in Catford. Along with directing The Big Firkin Band he plays with a number of other Big Bands in London and freelances with  bands, orchestras and ensembles all over Britain and Ireland. He frequently performs in West End shows and London Jazz venues. He has recorded and performed with many Jazz, Classical and Rock artists including Georgie Fame, the National Symphony Orchestra and Sinead O&apos;Connor. Touring credits include Liam Gallagher, Blur and Florence And The Machine.         
@@ -27,7 +27,7 @@ export default function Musicians() {
         <p className="text-lg">
         Eoghan also has a busy teaching schedule working with Lewisham Music, providing music lessons to young musicians of all abilities throughout the Borough of Lewisham.
         </p>
-        <div className="rounded overflow-hidden self-center">
+        <div className="rounded overflow-hidden self-center py-4">
           <Image data-testid={"band-leader-img"} src={eoghanKelly} width={250}  alt="Band leader Eoghan Kelly playing his trombone" title="Band leader Eoghan Kelly playing his trombone" className="self-center"/>
         </div>
       </div>

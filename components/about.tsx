@@ -1,11 +1,12 @@
 import Image from "next/image";
 import bandSunshine from "../public/bandSunshine.png"
+/* border-[#49cfd6] */
 
 export default function About() {
   return (
-    <div id="about" data-testid="about-section"  className="pt-16 px-8  lg:px-16 flex flex-col py-12 bg-white text-blue-950 font-text">
-      <h2 className="text-3xl text-black font-semibold border-b-2 border-[#49cfd6]">About</h2>
-      <div data-testid="about-blurb" className="py-4  text-lg font-light">
+    <div id="about" data-testid="about-section"  className="pt-24 min-h-screen px-8  lg:px-16 flex flex-col py-12 bg-white text-black font-text">
+      <h2 className="text-3xl text-black font-semibold border-b border-zinc-400 ">About</h2>
+      <div data-testid="about-blurb" className="py-4 pb-8 text-lg font-normal">
         <p className="">
           The Big Firkin Band is a collective of world class jazz musicians, based in Lewisham and South East London, who come together once a month to perform classic Big Band music made famous by the great bands of Duke Ellington, Count Basie, Buddy Rich, Thad Jones, Stan Kenton and Woody Herman.        
         </p>

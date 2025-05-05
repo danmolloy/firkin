@@ -14,8 +14,8 @@ export default function ContactForm() {
   const sendingMsg = (<div><h2 className="text-xl">Message sending...</h2></div>)
 
   return (
-      <div id="contact" data-testid="contact-form"  className='px-8 pt-8 pb-16 flex flex-col bg-[#49cfd6]  text-white font-text'>
-      <h2 className="text-3xl text-black font-semibold ">Contact us</h2>
+      <div id="contact" data-testid="contact-form"  className='px-8 pt-24 pb-16 flex flex-col  min-h-screen font-text'>
+      <h2 className="text-3xl  font-semibold ">Contact us</h2>
       {/* <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
                 <p className='text-gray-500'>Get info on upcoming gigs and events.</p>
@@ -104,7 +104,7 @@ export default function ContactForm() {
           </ErrorMessage>
           </div>
           </div>
-        <button disabled={props.isSubmitting || sendStatus === "sending"} id="submit-button" type='submit' className="disabled:opacity-30 hover:bg-[#62dee4] border shadow-sm border-white text-white m-2 p-1 w-24 rounded self-end">Submit</button>
+        <button disabled={props.isSubmitting || sendStatus === "sending"} id="submit-button" type='submit' className="disabled:opacity-30 hover:bg-slate-50 border  shadow-sm border-zinc-400  m-2 p-1 w-24 rounded self-end">Submit</button>
         <div>
         {sendStatus === "sending" 
         ? sendingMsg
