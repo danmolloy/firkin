@@ -12,7 +12,7 @@ export default function PosterHero(props: HeroProps) {
   const { nextGig } = props;
 
   return (
-    <div className="flex flex-col items-center justify-center h-[100dvh] w-[100vw]  font-title  ">
+    <div className="flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">
       <div className="bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow border-4 border-black  flex flex-col items-center justify-between mt-16 mb-8  h-full w-[95vw] sm:w-3/4 md:w-3/5 lg:w-2/5">
       <div className="absolute top-11 z-10 left-0 sm:left-32 md:left-48 lg:left-1/4 h-24 w-24 md:h-32  md:w-32">
             <Image className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
