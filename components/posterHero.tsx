@@ -13,11 +13,11 @@ export default function PosterHero(props: HeroProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">
-      <div className="bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow border-4 border-black  flex flex-col items-center justify-between mt-16 mb-8  h-full w-[95vw] sm:w-3/4 md:w-3/5 lg:w-2/5">
-      <div className="absolute top-11 z-10 left-0 sm:left-32 md:left-48 lg:left-1/4 h-24 w-24 md:h-32  md:w-32">
+      <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow border-4 border-black  flex flex-col items-center justify-between mt-16 mb-8  h-full w-[95vw] sm:w-3/4 md:w-3/5 lg:w-2/5">
+      <div className=" absolute top-0 z-10 left-0  h-24 w-24 ">
             <Image className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
             </div>
-          <div className="h-[85vh]  w-1/2 sm:w-2/5 md:w-1/3 lg:w-1/5 self-end absolute -z-0"> 
+          <div className="h-[85vh]  w-1/2 sm:w-2/5  self-end absolute -z-0"> 
             <Image alt="Blue background" src={"/teal-splash.png"} fill={true} />
           </div>
         <div className="flex flex-col items-start justify-start w-full ">
