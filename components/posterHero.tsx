@@ -13,7 +13,7 @@ export default function PosterHero(props: HeroProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">
-      <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow border-4 border-black  flex flex-col items-center justify-between mt-16 mb-8  h-full w-[95vw] sm:w-3/4 md:w-3/5 lg:w-2/5">
+      <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow  border-black  flex flex-col items-center justify-between sm:mt-16 mt-14 mb-8  h-full w-screen sm:w-3/4 md:w-3/5 lg:w-2/5">
       <div className=" absolute top-0 z-10 left-0  h-24 w-24 ">
             <Image className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
             </div>
@@ -21,7 +21,7 @@ export default function PosterHero(props: HeroProps) {
             <Image alt="Blue background" src={"/teal-splash.png"} fill={true} />
           </div>
         <div className="flex flex-col items-start justify-start w-full ">
-      <div className=" w-full aspect-[3/1] flex relative">
+      <div className=" w-full aspect-[5/2] flex relative">
       <Image className="  mx-2 p-2 " alt="The Big Firkin Band" src="/hero-text.png" fill={true} />
       </div>
       <div className=" w-full h-6 flex relative">
@@ -35,7 +35,7 @@ export default function PosterHero(props: HeroProps) {
                 <p>3.30-6pm</p>
 
               </div> 
-              <div className=" w-full aspect-[9/4] flex relative self-end" >
+              <div className=" w-full aspect-[9/4] flex relative self-end -mb-2" >
             <Image className="object-contain " src="/band-members.png" alt="The Big Firkin Band" fill={true}/>
             </div>
             </div>
