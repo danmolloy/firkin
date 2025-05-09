@@ -4,7 +4,7 @@ import bandSunshine from "../public/bandSunshine.png"
 
 export default function About() {
   return (
-    <div id="about" data-testid="about-section"  className="pt-24 min-h-screen px-12 sm:px-24   flex flex-col py-12  font-text">
+    <div id="about" data-testid="about-section"  className=" min-h-screen px-12 sm:px-24   flex flex-col py-16  font-text">
       <h2 className="text-5xl font-extrabold">ABOUT</h2>
       <div data-testid="about-blurb" className="py-12 text-lg font-normal">
         <p className="">

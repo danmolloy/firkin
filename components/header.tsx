@@ -70,7 +70,7 @@ export default function Header() {
   return (
 
     <div data-testid="header-section" className={`  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 bg-white z-20`}>
-       <Image  src={"/header-text.png"} alt="The Big Firkin Band" width={3966/15} height={466/15} className=" grayscale" />
+       <Image  src={"/header-text.png"} alt="The Big Firkin Band" width={3966/20} height={466/20} className=" grayscale" />
  
 {/* <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
  */}

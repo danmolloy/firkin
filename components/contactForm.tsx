@@ -14,7 +14,7 @@ export default function ContactForm() {
   const sendingMsg = (<div><h2 className="text-xl">Message sending...</h2></div>)
 
   return (
-      <div id="contact" data-testid="contact-form"  className='px-12 sm:px-24 pt-24 pb-16 flex flex-col bg-black text-white min-h-screen font-text'>
+      <div id="contact" data-testid="contact-form"  className='px-12 sm:px-24 py-16 pb-16 flex flex-col bg-black text-white min-h-screen font-text'>
       <h2 className="text-5xl font-extrabold ">CONTACT</h2>
       {/* <h2 className="text-2xl">Join our Mailing List</h2>
               <div>
