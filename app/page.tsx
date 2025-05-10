@@ -58,7 +58,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col text-black font-text " data-testid="main-page">
       
-  <div className="z-10">
+  <div className=" flex flex-col text-black font-text bg-white">
       <Header />
       <PosterHero nextGig={calendar[0]} />
       <About />

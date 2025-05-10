@@ -4,7 +4,7 @@ export default function Menu(props: {
 }) {
   const { setShowMenu } = props;
   return (
-    <div className="bg-white absolute flex flex-col right-0 mt-3 font-title w-1/2 md:w-1/4">
+    <div className=" absolute flex flex-col right-0 mt-3 font-title w-full h-screen bg-white ">
       <a onClick={() => setTimeout(() =>setShowMenu(false), 250)} href="/#about" className="p-2 hover:bg-blue-50 m-1">About</a>
       <a onClick={() => setTimeout(() =>setShowMenu(false), 250)} href="/#calendar" className="p-2 hover:bg-blue-50 m-1">Calendar</a>
       <a onClick={() => setTimeout(() =>setShowMenu(false), 250)} href="/#musicians" className="p-2 hover:bg-blue-50 m-1">Musicians</a>

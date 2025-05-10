@@ -69,23 +69,29 @@ export default function Header() {
 
   return (
 
-    <div data-testid="header-section" className={`  fixed w-full font-display border-b border-gray-600 h-14 flex flex-row justify-between items-center px-4 bg-white z-20`}>
-       <Image  src={"/header-text.png"} alt="The Big Firkin Band" width={3966/20} height={466/20} className=" grayscale" />
- 
-{/* <button onClick={() => animateScroll.scrollToTop({duration: 500, smooth: true})} className={`${!isUpperHalf && !isIntersecting ? "text-white": "text-black"} font-display`}>The Big Firkin Band</button>
- */}
-{/* <DonateButton />
- */}
- <div className="flex flex-row items-center text-2xl">
- <Link className="mx-2 md:mx-6 hover:text-slate-500" href="https://www.instagram.com/thebigfirkinband/"  target="_blank">
- <GrInstagram />
- </Link>
- <div>
- <button className="p-1 hover:text-slate-500" onClick={() => setShowMenu(!showMenu)}>
-  <GiHamburgerMenu />
- </button>
- {showMenu && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
- </div></div>
- </div>
+    <div
+  data-testid="header-section"
+  className="fixed w-full z-20 font-display  border-gray-600 h-14 mix-blend-difference flex flex-row justify-between items-center px-4 text-black"
+>
+{/*   <Image
+    src="/header-text.png"
+    alt="The Big Firkin Band"
+    width={198.3}
+    height={23.3}
+    className="mix-blend-difference brightness-200 contrast-0 grayscale  "
+  /> */}
+ <h1 className="font-bold text-xl mix-blend-difference text-white">THE BIG FIRKIN BAND</h1>
+   <div className="flex flex-row items-center text-2xl">
+    <div>
+      <button
+        className="p-1 text-white hover:text-slate-500 mix-blend-difference"
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <GiHamburgerMenu />
+      </button>
+      {showMenu && <Menu setShowMenu={(arg) => setShowMenu(arg)} />}
+    </div>
+  </div>
+</div>
   )
 }

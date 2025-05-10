@@ -16,7 +16,7 @@ export default function Hero(props: HeroProps) {
   
   return (
     <div>
-    <div data-testid="hero-section" className="bg-black text-white pt-12 text-lg pb-8 px-4 flex flex-col items-center justify-between h-screen fixed w-screen  z-0">
+    <div data-testid="hero-section" className="bg-black text-white pt-12 text-lg pb-8 px-4 flex flex-col items-center justify-between h-screen fixed w-screen ">
       <div className="text-center flex flex-col items-center mt-4 md:mt-24 self-center lg:w-1/2">
          <h1 className="font-display text-6xl md:text-7xl my-2 md:mt-12 text-yellow-500">The Big Firkin Band</h1>
          <div className=" p-2 md:p-4">
@@ -43,7 +43,7 @@ export default function Hero(props: HeroProps) {
           </div>
         </div>
     </div>
-          <div id="hero" className="z-0  h-screen w-screen">
+          <div id="hero" className="  h-screen w-screen">
 
           </div>
     </div>
