@@ -72,20 +72,20 @@ export default function Header() {
    <div
   data-testid="header-section"
 
-  className="fixed w-full z-20 font-display bg-white border-gray-600  h-14 flex flex-row justify-between items-center px-4 text-black"
+  className="fixed w-full z-20 font-display mix-blend-difference  border-gray-600  h-14 flex flex-row justify-between items-center px-4 "
 >
   <Image
     src="/header-text.png"
     alt="The Big Firkin Band"
     width={198.3}
     height={23.3}
-    className="brightness-200 contrast-200 grayscale"
+    className="brightness-200 contrast-200 grayscale invert"
   />
 
-  <div className=" flex flex-row items-center text-2xl e">
+  <div className=" flex flex-row items-center text-2xl ">
     {/* Button with mix-blend-difference */}
     <button
-      className="p-1 fill-black"
+      className="p-1 text-white"
       onClick={() => setShowMenu(!showMenu)}
     >
         <GiHamburgerMenu />
