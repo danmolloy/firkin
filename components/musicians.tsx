@@ -17,8 +17,8 @@ export default function Musicians() {
         <p  className="pb-4 text-lg">
         Band members have previously performed with Jazz greats such as Quincy Jones, Georgie Fame, Kenny Wheeler, Jamie Cullum, The BBC Big Band, Ronnie Scott’s Big Band, Syd Lawrence Orchestra, London Jazz Orchestra, The 1 o’clock Lab Band, BBC Concert Orchestra, The Heritage Orchestra, London Symphony Orchestra, Airto Moriero, Deodato, The Dirty Dozen Brass Band, Matthew Herbert Big Band, Rufus Reid and have also played and recorded for such artists as Dionne Warwick, Blur, Florence And The Machine, Liam Gallagher, Mark Ronson, Paul Weller, Steel Pulse, Emelie Sandé, Goldie, Pete Tong, Beverly Night, All Saints, Monthy Python and loads loads more! 
         </p>
-        <Image data-testid={"band-img"} src={bandDetail} width={500} alt="The band performing live at the Fox & Firkin" title="The band performing live at the Fox & Firkin" className="self-center"/>
-      </div>
+{/*         <Image data-testid={"band-img"} src={bandDetail} width={500} alt="The band performing live at the Fox & Firkin" title="The band performing live at the Fox & Firkin" className="self-center"/>
+ */}      </div>
       <div data-testid="band-leader" className="py-4 pb-8 flex flex-col ">
         <h3 className="text-xl pb-1 font-medium">BANDLEADER</h3>
         <p className="pb-4 text-lg">
@@ -27,9 +27,9 @@ export default function Musicians() {
         <p className="text-lg">
         Eoghan also has a busy teaching schedule working with Lewisham Music, providing music lessons to young musicians of all abilities throughout the Borough of Lewisham.
         </p>
-        <div className="rounded overflow-hidden self-center py-4">
+        {/* <div className="rounded overflow-hidden self-center py-4">
           <Image data-testid={"band-leader-img"} src={eoghanKelly} width={250}  alt="Band leader Eoghan Kelly playing his trombone" title="Band leader Eoghan Kelly playing his trombone" className="self-center"/>
-        </div>
+        </div> */}
       </div>
     </div>
   )

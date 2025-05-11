@@ -10,6 +10,7 @@ import NewsletterIndex from "./newsletter";
 import Image from "next/image";
 import Link from "next/link";
 import PosterHero from "@/components/posterHero";
+import PhotoAlbum from "@/components/photoAlbum";
 
 async function getData() {
   try {
@@ -65,6 +66,7 @@ export default async function Home() {
       <Calendar events={calendar.length > 0 ? calendar : []} />
 {/*       <NewsletterIndex />
  */}      <Musicians />
+ <PhotoAlbum />
       <ContactForm />
       <Footer />
       </div>

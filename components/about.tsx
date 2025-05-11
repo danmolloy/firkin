@@ -14,11 +14,11 @@ export default function About() {
           Expect to hear the greatest tunes from the golden age of jazz and swing performed by the best musicians in London, all in a relaxed and comfortable fashion at The Fox & Firkin on a Sunday afternoon.
         </p>
       </div>
-      <div className="rounded overflow-hidden self-center">
+      {/* <div className="rounded overflow-hidden self-center">
       
 
         <Image data-testid={"band-img"} src={bandSunshine} width={500} alt="Placeholder for band photo" title="Band photo placeholder" className="self-center"/>
-        </div>
+        </div> */}
     </div>
   )
 }
