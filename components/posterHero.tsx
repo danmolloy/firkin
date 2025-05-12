@@ -35,6 +35,10 @@ export default function PosterHero(props: HeroProps) {
                 <p>3.30-6pm</p>
 
               </div> 
+              <Link data-testid="insta-link" href="https://www.instagram.com/thebigfirkinband/" target="_blank"  title="Firkin Band Instagram" className=" hover:text-gray-500 flex flex-row items-center z-10 self-end mr-8 ">
+        <FaInstagram />
+        <p className="text-sm mx-1 ">Follow us</p>
+      </Link>
               <div className=" w-full aspect-[9/4] flex relative self-end -mb-2" >
             <Image className="object-contain " src="/band-members.png" alt="The Big Firkin Band" fill={true}/>
             </div>
