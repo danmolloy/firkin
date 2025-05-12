@@ -3,6 +3,7 @@ import { DateTime } from "luxon";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
+import HeroAlbum from "./heroAlbum";
 
 export type HeroProps = {
   nextGig: Event
@@ -12,8 +13,12 @@ export default function PosterHero(props: HeroProps) {
   const { nextGig } = props;
 
   return (
-    <div className="flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">
-      <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow  border-black  flex flex-col items-center justify-between sm:mt-16 mt-14 mb-8  h-full w-screen sm:w-3/4 md:w-3/5 lg:w-2/5">
+    <div className="relative overflow-hidden flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">
+      <div className="absolute top-12 hidden sm:flex saturate-75 ">
+
+        <HeroAlbum />
+      </div>
+      <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow shadow-lg  border-black  flex flex-col items-center justify-between sm:mt-16 mt-14 mb-8  h-full w-screen sm:w-3/4 md:w-3/5 lg:w-2/5">
       <div className=" absolute top-0 z-10 left-0  h-24 w-24 ">
             <Image className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
             </div>
