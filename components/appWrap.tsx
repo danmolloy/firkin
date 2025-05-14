@@ -20,7 +20,7 @@ export default function HeroWrapper() {
   return (
      <div className="relative w-screen h-screen overflow-hidden">
       { !reveal &&  (
-        <div className="fixed flex flex-col items-center text-black  justify-center inset-0 bg-white z-50 transition-opacity duration-500">
+        <div className={`${progress < 100 && "bg-black text-white"} fixed flex flex-col items-center  justify-center inset-0 z-50 transition-opacity duration-500`}>
           {/* <Image
               src="/header-text.png"
               alt="The Big Firkin Band"
@@ -32,7 +32,7 @@ export default function HeroWrapper() {
         </div>
       )}
       <div
-        className={`hero transition-[clip-path] duration-[2000ms]  ease-linear  ${
+        className={`hero transition-[clip-path] duration-[1200ms] ease-in-out  ${
           reveal ? 'clip-circle-full' : 'clip-circle-zero'
         }`}
       >
@@ -41,7 +41,7 @@ export default function HeroWrapper() {
 
       <style jsx global>{`
         .clip-circle-zero {
-          clip-path: circle(0% at 50% 25%);
+          clip-path: circle(0% at 50% 50%);
         }
         .clip-circle-full {
           clip-path: circle(150% at 50% 50%);
