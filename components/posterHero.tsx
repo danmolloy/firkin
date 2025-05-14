@@ -17,17 +17,17 @@ export default function PosterHero() {
       </div>
       <div className="relative overflow-hidden bg-[url(/bg-pattern.png)] bg-white bg-repeat shadow  border-black  flex flex-col items-center justify-between sm:mt-16 mt-14 mb-8  h-full w-screen sm:w-3/4 md:w-3/5 lg:w-2/5">
       <div className=" absolute top-0 z-10 left-0  h-24 w-24 ">
-            <Image className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
+            <Image loading="eager" className="" src="/free-entry.png" fill={true}  alt="Free Entry" />
             </div>
           <div className="h-[85vh]  w-1/2 sm:w-2/5  self-end absolute -z-0"> 
-            <Image alt="Blue background" src={"/teal-splash.png"} fill={true} />
+            <Image loading="eager" alt="Blue background" src={"/teal-splash.png"} fill={true} />
           </div>
         <div className="flex flex-col items-start justify-start w-full ">
       <div className=" w-full aspect-[5/2] flex relative">
-      <Image className="  mx-2 p-2 " alt="The Big Firkin Band" src="/hero-text.png" fill={true} />
+      <Image loading="eager" className="  mx-2 p-2 " alt="The Big Firkin Band" src="/hero-text.png" fill={true} />
       </div>
       <div className=" w-full h-6 flex relative">
-      <Image className="px-2" src="/hero-tagline-black.png" alt="17-piece jazz big band sensation!" fill={true} />
+      <Image loading="eager" className="px-2" src="/hero-tagline-black.png" alt="17-piece jazz big band sensation!" fill={true} />
       </div>
       </div>
       <div className="font-title text-center text-black  text-2xl  font-bold  self-center z-10">
@@ -42,7 +42,7 @@ export default function PosterHero() {
         <p className="text-sm mx-1 ">Follow us</p>
       </Link>
               <div className=" w-full aspect-[9/4] flex relative self-end -mb-2" >
-            <Image className="object-contain " src="/band-members.png" alt="The Big Firkin Band" fill={true}/>
+            <Image  loading="eager" className="object-contain " src="/band-members.png" alt="The Big Firkin Band" fill={true}/>
             </div>
             </div>
 </div>
