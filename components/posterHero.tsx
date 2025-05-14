@@ -5,12 +5,9 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import HeroAlbum from "./heroAlbum";
 
-export type HeroProps = {
-  nextGig: Event
-}
 
-export default function PosterHero(props: HeroProps) {
-  const { nextGig } = props;
+
+export default function PosterHero() {
 
   return (
     <div className="relative overflow-hidden flex flex-col items-center justify-center h-[100vh] w-[100vw]  font-title  ">

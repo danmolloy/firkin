@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PosterHero from "@/components/posterHero";
 import PhotoAlbum from "@/components/photoAlbum";
+import HeroWrapper from "@/components/appWrap";
 
 async function getData() {
   try {
@@ -61,7 +62,8 @@ export default async function Home() {
       
   <div className=" flex flex-col text-black font-text bg-white">
       <Header />
-      <PosterHero nextGig={calendar[0]} />
+      {/* <PosterHero /> */}
+      <HeroWrapper />
       <About />
       <Calendar events={calendar.length > 0 ? calendar : []} />
 {/*       <NewsletterIndex />
