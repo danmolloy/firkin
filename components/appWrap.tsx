@@ -41,7 +41,7 @@ export default function HeroWrapper() {
 
       <style jsx global>{`
         .clip-circle-zero {
-          clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 25%);
         }
         .clip-circle-full {
           clip-path: circle(150% at 50% 50%);
