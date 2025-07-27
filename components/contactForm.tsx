@@ -16,12 +16,12 @@ export default function ContactForm() {
   return (
       <div id="contact" data-testid="contact-form"  className='px-12 sm:px-24 py-16 pb-16 flex flex-col bg-black text-white min-h-screen font-text'>
       <h2 className="text-5xl font-extrabold ">CONTACT</h2>
-      {/* <h2 className="text-2xl">Join our Mailing List</h2>
-              <div>
-                <p className='text-gray-500'>Get info on upcoming gigs and events.</p>
-              </div> */}
+{/*       <h2 className="text-2xl">Join our Mailing List</h2>
+ */}              <div>
+                <p className='text-white'>Get in touch by <a href="mailto:ekelly100@hotmail.com" className='text-blue-500 hover:underline'>sending us an email</a>.</p>
+              </div>
 
-    <Formik    
+    {/* <Formik    
     initialValues={{
       name: '',
       email: '',
@@ -86,7 +86,7 @@ export default function ContactForm() {
           </div>
           </div>
           <div className="flex flex-col m-2 mb-0">
-          <label htmlFor='msg-text' className="form-label ">Message {/* <span className='text-sm text-gray-400'>Optional</span> */}</label>
+          <label htmlFor='msg-text' className="form-label ">Message </label>
           <Field 
           multiline="6"
           maxLength="500"
@@ -115,7 +115,7 @@ export default function ContactForm() {
         : null}
       </div>
       </Form> )}
-    </Formik>
+    </Formik> */}
     </div>
   )
 }
