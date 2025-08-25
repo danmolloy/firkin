@@ -15,7 +15,7 @@ export default function EventTile(props: EventTileProps) {
     const startDate = new Date(event.start.dateTime);
     const endDate = new Date(event.end.dateTime);
     
-    // Format dates for Apple Calendar URL
+    // Format dates for iCalendar format
     const formatDate = (date: Date) => {
       return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
     };
@@ -23,26 +23,34 @@ export default function EventTile(props: EventTileProps) {
     const startFormatted = formatDate(startDate);
     const endFormatted = formatDate(endDate);
     
-    // Create Apple Calendar URL
-    const appleCalendarUrl = `data:text/calendar;charset=utf8,BEGIN:VCALENDAR
+    // Create iCalendar content
+    const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
-URL:${encodeURIComponent(window.location.href)}
+URL:${window.location.href}
 DTSTART:${startFormatted}
 DTEND:${endFormatted}
-SUMMARY:${encodeURIComponent(event.description)}
-DESCRIPTION:${encodeURIComponent(event.description)}
-LOCATION:${encodeURIComponent(event.location || 'Venue TBC')}
+SUMMARY:The Big Firkin Band
+DESCRIPTION:${event.description}
+LOCATION:${event.location || 'Venue TBC'}
 END:VEVENT
 END:VCALENDAR`;
     
-    // Create a temporary link and trigger download
+    // Create blob and download for iOS Safari compatibility
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    
     const link = document.createElement('a');
-    link.href = appleCalendarUrl;
-    link.download = 'event.ics';
+    link.href = url;
+    link.download = 'TheBigFirkinBand.ics';
+    link.style.display = 'none';
+    
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    // Clean up the blob URL
+    setTimeout(() => URL.revokeObjectURL(url), 100);
   };
 
   const addToGoogleCalendar = () => {
@@ -58,7 +66,7 @@ END:VCALENDAR`;
     const endFormatted = formatDate(endDate);
     
     // Create Google Calendar URL
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.description)}&dates=${startFormatted}/${endFormatted}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location || 'Venue TBC')}`;
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('The Big Firkin Band')}&dates=${startFormatted}/${endFormatted}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location || 'Venue TBC')}`;
     
     // Open Google Calendar in a new tab
     window.open(googleCalendarUrl, '_blank');
