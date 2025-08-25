@@ -10,7 +10,7 @@ export type EventTileProps = {
 
 export default function EventTile(props: EventTileProps) {
   const { event } = props;
-
+  
   const addToAppleCalendar = () => {
     const startDate = new Date(event.start.dateTime);
     const endDate = new Date(event.end.dateTime);
