@@ -7,21 +7,18 @@ import axios from "axios";
 export default function ContactForm() {
   const [sendStatus, setSendStatus] = useState<"success"|"sending"|"err"|null>(null)
 
-  const sendFail = (<div><h2 className="text-xl">Message failed to send.</h2> <p>Please <a href='mailto:ekelly100@hotmail.com' className='text-blue-500'>send an email</a>.</p></div>)
+  const sendFail = (<div><h2 className="text-lg">Message failed to send.</h2> <p className=''>Please <a href='mailto:ekelly100@hotmail.com' className='text-blue-500'>send an email</a>.</p></div>)
 
-  const sendSuccess = (<div><h2 className="text-xl">Message recieved!</h2><p>We will get back to you as soon as possible.</p></div>)
+  const sendSuccess = (<div><h2 className="text-lg">Message recieved!</h2><p className=''>We will get back to you as soon as possible.</p></div>)
 
-  const sendingMsg = (<div><h2 className="text-xl">Message sending...</h2></div>)
+  const sendingMsg = (<div><h2 className="text-lg">Message sending...</h2></div>)
 
   return (
       <div id="contact" data-testid="contact-form"  className='px-12 sm:px-24 py-16 pb-16 flex flex-col bg-black text-white min-h-screen font-text'>
       <h2 className="text-5xl font-extrabold ">CONTACT</h2>
-{/*       <h2 className="text-2xl">Join our Mailing List</h2>
- */}              <div>
-                <p className='text-white'>Get in touch by <a href="mailto:ekelly100@hotmail.com" className='text-blue-500 hover:underline'>sending us an email</a>.</p>
-              </div>
 
-    {/* <Formik    
+
+    <Formik    
     initialValues={{
       name: '',
       email: '',
@@ -115,7 +112,7 @@ export default function ContactForm() {
         : null}
       </div>
       </Form> )}
-    </Formik> */}
+    </Formik>
     </div>
   )
 }

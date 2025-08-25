@@ -18,7 +18,7 @@ async function getData() {
     const API_KEY = process.env.API_KEY
         const CALENDAR_ID = process.env.CALENDAR_ID
         const res = await fetch(
-          `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`,
+          `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&singleEvents=true&orderBy=startTime`,
           {cache: "no-store"}
         );
    
@@ -53,9 +53,17 @@ export default async function Home() {
   //const [showHeader, setShowHeader] = useState<boolean>(true)
   //const [showMenu, setShowMenu] = useState<boolean>(false)
   const data = await getData()
-  const calendar: Event[] = data.items.filter((i: Event) => i.start !== undefined).sort((a:Event, b:Event) => 
-    new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()).filter((i: Event) => 
-      DateTime.fromJSDate(new Date(i.start.dateTime)) >= DateTime.now())
+  const now = DateTime.now()
+  const threeMonthsFromNow = now.plus({ months: 3 })
+  
+  const calendar: Event[] = data.items
+    .filter((i: Event) => i.start !== undefined)
+    .filter((i: Event) => {
+      const eventDate = DateTime.fromJSDate(new Date(i.start.dateTime))
+      return eventDate >= now && eventDate <= threeMonthsFromNow
+    })
+    .sort((a: Event, b: Event) => 
+      new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime())
 
   return (
     <main className="flex flex-col text-black font-text " data-testid="main-page">
